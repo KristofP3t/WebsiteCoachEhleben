@@ -8,6 +8,7 @@ navToggle.addEventListener('click', () => {
     const isOpen = navMenu.classList.toggle('open');
     navToggle.classList.toggle('open', isOpen);
     navToggle.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
 });
 
 // Close menu when a link is clicked
@@ -33,15 +34,20 @@ window.addEventListener('scroll', () => {
 const faqItems = document.querySelectorAll('.faq__item');
 
 faqItems.forEach(item => {
-    item.querySelector('.faq__question').addEventListener('click', () => {
+    const btn = item.querySelector('.faq__question');
+    btn.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
 
         // Close all open items
-        faqItems.forEach(i => i.classList.remove('active'));
+        faqItems.forEach(i => {
+            i.classList.remove('active');
+            i.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+        });
 
         // Open the clicked item unless it was already open
         if (!isActive) {
             item.classList.add('active');
+            btn.setAttribute('aria-expanded', 'true');
         }
     });
 });

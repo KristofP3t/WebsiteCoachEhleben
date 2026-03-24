@@ -73,6 +73,7 @@ img { max-width: 100%; height: auto; display: block; }
     letter-spacing: -0.02em;
     text-align: center;
     margin-bottom: var(--sp-sm);
+    text-wrap: balance;
 }
 
 .section__subtitle {
@@ -99,6 +100,11 @@ img { max-width: 100%; height: auto; display: block; }
     transition: background var(--transition), color var(--transition), border-color var(--transition);
     text-align: center;
     white-space: nowrap;
+    touch-action: manipulation;
+}
+.btn:focus-visible {
+    outline: 3px solid var(--color-black);
+    outline-offset: 3px;
 }
 
 .btn--primary {
@@ -151,6 +157,11 @@ img { max-width: 100%; height: auto; display: block; }
     font-weight: 700;
     letter-spacing: -0.02em;
 }
+.nav__logo:focus-visible {
+    outline: 3px solid var(--color-black);
+    outline-offset: 3px;
+    border-radius: var(--radius);
+}
 
 .nav__menu {
     display: flex;
@@ -165,6 +176,11 @@ img { max-width: 100%; height: auto; display: block; }
     transition: color var(--transition);
 }
 .nav__menu a:hover { color: var(--color-black); }
+.nav__menu a:focus-visible {
+    outline: 3px solid var(--color-black);
+    outline-offset: 3px;
+    border-radius: var(--radius);
+}
 
 .nav__cta {
     background: var(--color-black) !important;
@@ -190,7 +206,7 @@ img { max-width: 100%; height: auto; display: block; }
     width: 24px;
     height: 2px;
     background: var(--color-black);
-    transition: all var(--transition);
+    transition: transform var(--transition), opacity var(--transition);
 }
 .nav__toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav__toggle.open span:nth-child(2) { opacity: 0; }
@@ -216,6 +232,7 @@ img { max-width: 100%; height: auto; display: block; }
     line-height: 1.1;
     letter-spacing: -0.03em;
     margin-bottom: var(--sp-md);
+    text-wrap: balance;
 }
 
 .hero__subline {
@@ -408,8 +425,13 @@ img { max-width: 100%; height: auto; display: block; }
     align-items: center;
     gap: var(--sp-sm);
     transition: color var(--transition);
+    touch-action: manipulation;
 }
 .faq__question:hover { color: var(--color-gray-600); }
+.faq__question:focus-visible {
+    outline: 3px solid var(--color-black);
+    outline-offset: 3px;
+}
 
 .faq__question::after {
     content: "+";
@@ -571,4 +593,44 @@ img { max-width: 100%; height: auto; display: block; }
     .footer__grid { grid-template-columns: 1fr; }
 
     .contact__options { flex-direction: column; align-items: center; }
+}
+
+/* ============================================================
+   SKIP LINK
+============================================================ */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: var(--sp-sm);
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    z-index: 200;
+    transition: top var(--transition);
+}
+.skip-link:focus {
+    top: var(--sp-sm);
+}
+
+/* ============================================================
+   SCROLL MARGIN (fixed nav offset)
+============================================================ */
+#home, #coaching, #ueber-mich, #stimmen, #faq, #kontakt {
+    scroll-margin-top: var(--nav-height);
+}
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+    html {
+        scroll-behavior: auto;
+    }
 }

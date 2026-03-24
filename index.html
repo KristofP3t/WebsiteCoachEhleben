@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Marvin Ehleben – Life & Business Coach. [Beschreibung folgt]">
+    <meta name="theme-color" content="#ffffff">
     <title>Marvin Ehleben – Life & Business Coach</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,12 +12,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 
     <!-- ===== NAVIGATION ===== -->
-    <nav class="nav" id="nav">
+    <nav class="nav" id="nav" aria-label="Hauptnavigation">
         <div class="container">
             <a href="#home" class="nav__logo">Marvin Ehleben</a>
-            <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen">
+            <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -31,6 +33,8 @@
             </ul>
         </div>
     </nav>
+
+    <main id="main-content">
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="home">
@@ -107,17 +111,17 @@
             <div class="testimonials__grid">
 
                 <div class="testimonial">
-                    <p class="testimonial__quote">"[Testimonial folgt]"</p>
+                    <p class="testimonial__quote">&ldquo;[Testimonial folgt]&rdquo;</p>
                     <p class="testimonial__author">— Name, Beruf</p>
                 </div>
 
                 <div class="testimonial">
-                    <p class="testimonial__quote">"[Testimonial folgt]"</p>
+                    <p class="testimonial__quote">&ldquo;[Testimonial folgt]&rdquo;</p>
                     <p class="testimonial__author">— Name, Beruf</p>
                 </div>
 
                 <div class="testimonial">
-                    <p class="testimonial__quote">"[Testimonial folgt]"</p>
+                    <p class="testimonial__quote">&ldquo;[Testimonial folgt]&rdquo;</p>
                     <p class="testimonial__author">— Name, Beruf</p>
                 </div>
 
@@ -132,28 +136,28 @@
             <div class="faq__list">
 
                 <div class="faq__item">
-                    <button class="faq__question">Was ist Coaching und wie läuft es ab?</button>
-                    <div class="faq__answer"><p>[Antwort folgt]</p></div>
+                    <button class="faq__question" aria-expanded="false" aria-controls="faq-1">Was ist Coaching und wie läuft es ab?</button>
+                    <div class="faq__answer" id="faq-1"><p>[Antwort folgt]</p></div>
                 </div>
 
                 <div class="faq__item">
-                    <button class="faq__question">Wie lange dauert ein Coaching?</button>
-                    <div class="faq__answer"><p>[Antwort folgt]</p></div>
+                    <button class="faq__question" aria-expanded="false" aria-controls="faq-2">Wie lange dauert ein Coaching?</button>
+                    <div class="faq__answer" id="faq-2"><p>[Antwort folgt]</p></div>
                 </div>
 
                 <div class="faq__item">
-                    <button class="faq__question">Ist Coaching auch online möglich?</button>
-                    <div class="faq__answer"><p>[Antwort folgt]</p></div>
+                    <button class="faq__question" aria-expanded="false" aria-controls="faq-3">Ist Coaching auch online möglich?</button>
+                    <div class="faq__answer" id="faq-3"><p>[Antwort folgt]</p></div>
                 </div>
 
                 <div class="faq__item">
-                    <button class="faq__question">Was kostet ein Coaching?</button>
-                    <div class="faq__answer"><p>[Antwort folgt]</p></div>
+                    <button class="faq__question" aria-expanded="false" aria-controls="faq-4">Was kostet ein Coaching?</button>
+                    <div class="faq__answer" id="faq-4"><p>[Antwort folgt]</p></div>
                 </div>
 
                 <div class="faq__item">
-                    <button class="faq__question">Für wen ist Coaching geeignet?</button>
-                    <div class="faq__answer"><p>[Antwort folgt]</p></div>
+                    <button class="faq__question" aria-expanded="false" aria-controls="faq-5">Für wen ist Coaching geeignet?</button>
+                    <div class="faq__answer" id="faq-5"><p>[Antwort folgt]</p></div>
                 </div>
 
             </div>
@@ -171,6 +175,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
