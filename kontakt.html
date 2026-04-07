@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kostenloses Erstgespräch mit Marvin Ehleben – Life & Business Coach. Jetzt Kontakt aufnehmen.">
+    <title>Kontakt & Erstgespräch – Marvin Ehleben</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav" id="nav" aria-label="Hauptnavigation">
+        <div class="container">
+            <a href="index.html" class="nav__logo">Marvin Ehleben</a>
+            <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="index.html#home">Home</a></li>
+                <li class="nav__item--dropdown">
+                    <a href="index.html#coaching" class="nav__dropdown-trigger">Coaching <span class="nav__caret" aria-hidden="true"></span></a>
+                    <ul class="nav__dropdown">
+                        <li><a href="coaching-life.html">Life Coaching</a></li>
+                        <li><a href="coaching-business.html">Business Coaching</a></li>
+                        <li><a href="coaching-angebot3.html">[Angebot 3]</a></li>
+                    </ul>
+                </li>
+                <li><a href="ueber-mich.html">Über mich</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="kontakt.html" class="nav__cta" aria-current="page">Erstgespräch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="contact-page">
+            <div class="container">
+
+                <div class="contact-page__header">
+                    <h1>Kostenloses Erstgespräch</h1>
+                    <p>[CTA-Text folgt – was erwartet die Person nach dem Absenden?]</p>
+                </div>
+
+                <div class="contact-page__grid">
+
+                    <!-- ===== FORM ===== -->
+                    <div class="contact-page__form-wrap">
+                        <!-- SUCCESS STATE (hidden by default) -->
+                        <div class="contact-form__success" id="formSuccess" hidden>
+                            <div class="contact-form__success-icon" aria-hidden="true">&#10003;</div>
+                            <h2>Nachricht gesendet!</h2>
+                            <p>Vielen Dank für Ihre Nachricht. Ich melde mich schnellstmöglich bei Ihnen.</p>
+                            <a href="index.html" class="btn btn--outline">Zurück zur Startseite</a>
+                        </div>
+
+                        <!-- FORM -->
+                        <form
+                            class="contact-form"
+                            id="contactForm"
+                            novalidate
+                            aria-label="Kontaktformular"
+                            action="[FORM-ENDPOINT]"
+                            method="POST"
+                        >
+                            <!-- Honeypot for spam protection -->
+                            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                            <div class="contact-form__row contact-form__row--split">
+                                <div class="contact-form__group">
+                                    <label class="contact-form__label" for="vorname">Vorname <span aria-hidden="true">*</span></label>
+                                    <input
+                                        class="contact-form__input"
+                                        type="text"
+                                        id="vorname"
+                                        name="vorname"
+                                        autocomplete="given-name"
+                                        required
+                                        aria-required="true"
+                                        aria-describedby="vorname-error"
+                                    >
+                                    <span class="contact-form__error" id="vorname-error" role="alert"></span>
+                                </div>
+                                <div class="contact-form__group">
+                                    <label class="contact-form__label" for="nachname">Nachname <span aria-hidden="true">*</span></label>
+                                    <input
+                                        class="contact-form__input"
+                                        type="text"
+                                        id="nachname"
+                                        name="nachname"
+                                        autocomplete="family-name"
+                                        required
+                                        aria-required="true"
+                                        aria-describedby="nachname-error"
+                                    >
+                                    <span class="contact-form__error" id="nachname-error" role="alert"></span>
+                                </div>
+                            </div>
+
+                            <div class="contact-form__row">
+                                <div class="contact-form__group">
+                                    <label class="contact-form__label" for="email">E-Mail-Adresse <span aria-hidden="true">*</span></label>
+                                    <input
+                                        class="contact-form__input"
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        autocomplete="email"
+                                        required
+                                        aria-required="true"
+                                        aria-describedby="email-error"
+                                    >
+                                    <span class="contact-form__error" id="email-error" role="alert"></span>
+                                </div>
+                            </div>
+
+                            <div class="contact-form__row">
+                                <div class="contact-form__group">
+                                    <label class="contact-form__label" for="telefon">Telefon <span class="contact-form__optional">(optional)</span></label>
+                                    <input
+                                        class="contact-form__input"
+                                        type="tel"
+                                        id="telefon"
+                                        name="telefon"
+                                        autocomplete="tel"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="contact-form__row">
+                                <div class="contact-form__group">
+                                    <label class="contact-form__label" for="thema">Thema <span aria-hidden="true">*</span></label>
+                                    <select
+                                        class="contact-form__input contact-form__select"
+                                        id="thema"
+                                        name="thema"
+                                        required
+                                        aria-required="true"
+                                        aria-describedby="thema-error"
+                                    >
+                                        <option value="" disabled selected>Bitte wählen …</option>
+                                        <option value="life-coaching">Life Coaching</option>
+                                        <option value="business-coaching">Business Coaching</option>
+                                        <option value="sonstiges">Sonstiges</option>
+                                    </select>
+                                    <span class="contact-form__error" id="thema-error" role="alert"></span>
+                                </div>
+                            </div>
+
+                            <div class="contact-form__row">
+                                <div class="contact-form__group">
+                                    <label class="contact-form__label" for="nachricht">Ihre Nachricht <span aria-hidden="true">*</span></label>
+                                    <textarea
+                                        class="contact-form__input contact-form__textarea"
+                                        id="nachricht"
+                                        name="nachricht"
+                                        rows="6"
+                                        required
+                                        aria-required="true"
+                                        aria-describedby="nachricht-error"
+                                        placeholder="Womit kann ich Ihnen helfen?"
+                                    ></textarea>
+                                    <span class="contact-form__error" id="nachricht-error" role="alert"></span>
+                                </div>
+                            </div>
+
+                            <div class="contact-form__row">
+                                <div class="contact-form__group contact-form__group--checkbox">
+                                    <label class="contact-form__checkbox-label">
+                                        <input
+                                            type="checkbox"
+                                            id="datenschutz"
+                                            name="datenschutz"
+                                            required
+                                            aria-required="true"
+                                            aria-describedby="datenschutz-error"
+                                        >
+                                        <span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu.</span>
+                                    </label>
+                                    <span class="contact-form__error" id="datenschutz-error" role="alert"></span>
+                                </div>
+                            </div>
+
+                            <div class="contact-form__row">
+                                <button type="submit" class="btn btn--primary contact-form__submit">
+                                    Nachricht senden
+                                </button>
+                            </div>
+
+                            <p class="contact-form__note">* Pflichtfelder</p>
+                        </form>
+                    </div>
+
+                    <!-- ===== SIDEBAR ===== -->
+                    <aside class="contact-page__info" aria-label="Kontaktinformationen">
+                        <h2>Lieber direkt?</h2>
+                        <div class="contact-info__item">
+                            <span class="contact-info__icon" aria-hidden="true">✉</span>
+                            <div>
+                                <p class="contact-info__label">E-Mail</p>
+                                <a href="mailto:kontakt@marvinehleben.de">kontakt@marvinehleben.de</a>
+                            </div>
+                        </div>
+                        <div class="contact-info__item">
+                            <span class="contact-info__icon" aria-hidden="true">☎</span>
+                            <div>
+                                <p class="contact-info__label">Telefon</p>
+                                <a href="tel:+49">[Telefonnummer]</a>
+                            </div>
+                        </div>
+                        <div class="contact-info__item">
+                            <span class="contact-info__icon" aria-hidden="true">◷</span>
+                            <div>
+                                <p class="contact-info__label">Erreichbarkeit</p>
+                                <p>[Zeiten folgen]</p>
+                            </div>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <p class="footer__logo">Marvin Ehleben</p>
+                    <p>Life &amp; Business Coach</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#coaching">Coaching</a></li>
+                        <li><a href="ueber-mich.html">Über mich</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer__social">
+                    <h4>Social Media</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="footer__legal">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Marvin Ehleben. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

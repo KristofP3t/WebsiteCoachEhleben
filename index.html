@@ -25,11 +25,17 @@
             </button>
             <ul class="nav__menu" id="navMenu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#coaching">Coaching</a></li>
-                <li><a href="#ueber-mich">Über mich</a></li>
-                <li><a href="#stimmen">Stimmen</a></li>
+                <li class="nav__item--dropdown">
+                    <a href="#coaching" class="nav__dropdown-trigger">Coaching <span class="nav__caret" aria-hidden="true"></span></a>
+                    <ul class="nav__dropdown">
+                        <li><a href="coaching-life.html">Life Coaching</a></li>
+                        <li><a href="coaching-business.html">Business Coaching</a></li>
+                        <li><a href="coaching-angebot3.html">[Angebot 3]</a></li>
+                    </ul>
+                </li>
+                <li><a href="ueber-mich.html">Über mich</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#kontakt" class="nav__cta">Erstgespräch</a></li>
+                <li><a href="kontakt.html" class="nav__cta">Erstgespräch</a></li>
             </ul>
         </div>
     </nav>
@@ -47,7 +53,36 @@
                     <span>Wachstum</span>
                     <span>Wirkung</span>
                 </div>
-                <a href="#kontakt" class="btn btn--primary">Zum kostenlosen Erstgespräch</a>
+                <a href="kontakt.html" class="btn btn--primary">Zum kostenlosen Erstgespräch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WIE ICH ARBEITE ===== -->
+    <section class="how" id="wie-ich-arbeite">
+        <div class="container">
+            <h2 class="section__title">Wie ich arbeite</h2>
+            <p class="section__subtitle">[Introtext folgt – was macht die Zusammenarbeit besonders?]</p>
+            <div class="how__grid">
+
+                <div class="how__item">
+                    <div class="how__number" aria-hidden="true">01</div>
+                    <h3>[Prinzip / Schritt 1]</h3>
+                    <p>[Beschreibungstext zu Prinzip 1 folgt – kurz und prägnant.]</p>
+                </div>
+
+                <div class="how__item">
+                    <div class="how__number" aria-hidden="true">02</div>
+                    <h3>[Prinzip / Schritt 2]</h3>
+                    <p>[Beschreibungstext zu Prinzip 2 folgt – kurz und prägnant.]</p>
+                </div>
+
+                <div class="how__item">
+                    <div class="how__number" aria-hidden="true">03</div>
+                    <h3>[Prinzip / Schritt 3]</h3>
+                    <p>[Beschreibungstext zu Prinzip 3 folgt – kurz und prägnant.]</p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -68,7 +103,7 @@
                         <li>Thema 2</li>
                         <li>Thema 3</li>
                     </ul>
-                    <a href="#kontakt" class="btn btn--outline">Mehr erfahren</a>
+                    <a href="coaching-life.html" class="btn btn--outline">Mehr erfahren</a>
                 </div>
 
                 <div class="coaching__card">
@@ -80,7 +115,19 @@
                         <li>Thema 2</li>
                         <li>Thema 3</li>
                     </ul>
-                    <a href="#kontakt" class="btn btn--outline">Mehr erfahren</a>
+                    <a href="coaching-business.html" class="btn btn--outline">Mehr erfahren</a>
+                </div>
+
+                <div class="coaching__card">
+                    <div class="coaching__icon">&#9671;</div>
+                    <h3>[Angebot 3]</h3>
+                    <p>[Beschreibungstext drittes Angebot folgt]</p>
+                    <ul class="coaching__list">
+                        <li>Thema 1</li>
+                        <li>Thema 2</li>
+                        <li>Thema 3</li>
+                    </ul>
+                    <a href="coaching-angebot3.html" class="btn btn--outline">Mehr erfahren</a>
                 </div>
 
             </div>
@@ -96,35 +143,13 @@
                 </div>
                 <div class="about__content">
                     <h2>Über Marvin Ehleben</h2>
-                    <p>[Biografie folgt]</p>
-                    <p>[Weitere Informationen folgen]</p>
-                    <a href="#kontakt" class="btn btn--primary">Lass uns sprechen</a>
+                    <p>[Kurze Vorstellung folgt – wer bin ich, was treibt mich an?]</p>
+                    <p>[Ein weiterer Satz zum Ansatz oder zur Erfahrung folgt.]</p>
+                    <div class="about__actions">
+                        <a href="ueber-mich.html" class="btn btn--outline">Mehr über mich</a>
+                        <a href="kontakt.html" class="btn btn--primary">Lass uns sprechen</a>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== TESTIMONIALS ===== -->
-    <section class="testimonials" id="stimmen">
-        <div class="container">
-            <h2 class="section__title">Das sagen meine Klienten</h2>
-            <div class="testimonials__grid">
-
-                <div class="testimonial">
-                    <p class="testimonial__quote">&ldquo;[Testimonial folgt]&rdquo;</p>
-                    <p class="testimonial__author">— Name, Beruf</p>
-                </div>
-
-                <div class="testimonial">
-                    <p class="testimonial__quote">&ldquo;[Testimonial folgt]&rdquo;</p>
-                    <p class="testimonial__author">— Name, Beruf</p>
-                </div>
-
-                <div class="testimonial">
-                    <p class="testimonial__quote">&ldquo;[Testimonial folgt]&rdquo;</p>
-                    <p class="testimonial__author">— Name, Beruf</p>
-                </div>
-
             </div>
         </div>
     </section>
@@ -170,8 +195,7 @@
             <h2 class="section__title">Kostenloses Erstgespräch</h2>
             <p class="section__subtitle">[CTA-Text folgt]</p>
             <div class="contact__options">
-                <a href="mailto:kontakt@marvinehleben.de" class="btn btn--primary">Per E-Mail schreiben</a>
-                <a href="tel:+49" class="btn btn--outline">Direkt anrufen</a>
+                <a href="kontakt.html" class="btn btn--primary">Jetzt Kontakt aufnehmen</a>
             </div>
         </div>
     </section>
@@ -193,8 +217,8 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#coaching">Coaching</a></li>
-                        <li><a href="#ueber-mich">Über mich</a></li>
-                        <li><a href="#kontakt">Kontakt</a></li>
+                        <li><a href="ueber-mich.html">Über mich</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
                     </ul>
                 </div>
 
@@ -209,8 +233,8 @@
                 <div class="footer__legal">
                     <h4>Rechtliches</h4>
                     <ul>
-                        <li><a href="#">Impressum</a></li>
-                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
                     </ul>
                 </div>
 
