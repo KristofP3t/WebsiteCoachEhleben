@@ -244,6 +244,13 @@ img { max-width: 100%; height: auto; display: block; }
     display: block;
 }
 
+/* Keyboard: show dropdown when focus is inside (desktop only) */
+@media (min-width: 641px) {
+    .nav__item--dropdown:focus-within .nav__dropdown {
+        display: block;
+    }
+}
+
 .nav__dropdown li {
     margin: 0;
 }
@@ -575,12 +582,15 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .faq__answer {
-    max-height: 0;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+}
+.faq__answer > p {
     overflow: hidden;
-    transition: max-height 0.35s ease;
 }
 .faq__item.active .faq__answer {
-    max-height: 400px;
+    grid-template-rows: 1fr;
 }
 .faq__answer p {
     padding-bottom: var(--sp-md);
@@ -1517,7 +1527,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* ============================================================
    SCROLL MARGIN (fixed nav offset)
 ============================================================ */
-#home, #coaching, #ueber-mich, #stimmen, #faq, #kontakt {
+#home, #coaching, #wie-ich-arbeite, #ueber-mich, #stimmen, #faq, #kontakt {
     scroll-margin-top: var(--nav-height);
 }
 
