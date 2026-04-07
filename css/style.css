@@ -226,17 +226,25 @@ img { max-width: 100%; height: auto; display: block; }
 .nav__dropdown {
     display: none;
     position: absolute;
-    top: calc(100% + 0.75rem);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
+    padding-top: 0.75rem;
+    z-index: 10;
+    list-style: none;
+}
+
+.nav__dropdown::before {
+    content: '';
+    display: block;
     background: var(--color-white);
     border: 1px solid var(--color-gray-200);
     border-radius: var(--radius-lg);
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    position: absolute;
+    inset: 0.75rem 0 0;
+    z-index: -1;
     min-width: 180px;
-    padding: var(--sp-xs) 0;
-    z-index: 10;
-    list-style: none;
 }
 
 .nav__item--dropdown:hover .nav__dropdown,
@@ -253,6 +261,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .nav__dropdown li {
     margin: 0;
+    min-width: 180px;
 }
 
 .nav__dropdown a {
